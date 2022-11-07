@@ -2,42 +2,8 @@ import os
 import time
 import sys
 
-# done = 'false'
-# #here is the animation
-# def animate():
-#     while done == 'false':
-#         sys.stdout.write('\rloading |')
-#         time.sleep(0.1)
-#         sys.stdout.write('\rloading /')
-#         time.sleep(0.1)
-#         sys.stdout.write('\rloading -')
-#         time.sleep(0.1)
-#         sys.stdout.write('\rloading \\')
-#         time.sleep(0.1)
-#     sys.stdout.write('\rDone!     ')
-#
-# animate()
-# #long process here
-# done = 'false'
-#
-# import sys
-# import time
-#
-# for i in range(3):
-#     sys.stdout.write('\t' + ','.join([str(a) for a in range(i+1, 0, -1)]))
-#     sys.stdout.flush()
-#     time.sleep(1)
-#
-# sys.stdout.write('\n')
-
-
-# for i in range(0, 101, 10):
-#     print(f'>> You have finished {i}%', flush=False)
-#     time.sleep(1)
-
-
 print("\n")
-time.sleep(5)
+# time.sleep(2)
 spaces_1 = 40
 astrics_1 = 1
 while True:
@@ -53,7 +19,6 @@ while True:
 time.sleep(1)
 
 print("\033[11A")
-# print("\033[37C")
 
 
 spaces_2 = 38
@@ -116,7 +81,7 @@ while True:
 
 time.sleep(1)
 
-print(f"\033[10A", end="")
+print("\033[10A", end="")
 
 astrics_6 = 10
 while True:
@@ -132,7 +97,7 @@ while True:
 
 time.sleep(1)
 
-print(f"\033[20A", end="")
+print("\033[20A", end="")
 
 astrics_7 = 10
 while True:
@@ -148,7 +113,7 @@ while True:
 
 time.sleep(1)
 
-print(f"\033[20A", end="")
+print("\033[20A", end="")
 
 astrics_8 = 1
 while True:
@@ -162,5 +127,65 @@ while True:
     print("")
     astrics_8 += 1
 
-print("\033[20B")
-print("-" * 35, "Donee!!!", "-" * 30)
+print("\033[33C", end="\033[1A")
+time.sleep(1)
+
+
+while 1:
+    print("__ " * 5)
+
+    time.sleep(0.3)
+
+    print("\033[33C", end="\033[1A")
+    print(" " * 14)
+
+
+
+    print("\033[5A", end="")
+
+    for i in range(8):
+        print("\033[35C", end="")
+        print(" " * i, end="")
+        print("\\")
+
+    time.sleep(0.3)
+
+    print("\033[8A", end="")
+
+    for i in range(8):
+        print("\033[35C", end="")
+        print(" " * i, end="")
+        print(" ")
+
+
+    print("\033[9A")
+    for i in range(9):
+        print("\033[39C", end="")
+        print("|")
+
+    time.sleep(0.3)
+
+    print("\033[10A")
+    for i in range(9):
+        print("\033[39C", end="")
+        print(" ")
+
+
+
+    print("\033[8A", end="")
+
+    for i in range(8, 0, -1):
+        print("\033[35C", end="")
+        print(" " * i, end="")
+        print("/")
+
+    time.sleep(0.3)
+
+    print("\033[8A", end="")
+
+    for i in range(8, 0, -1):
+        print("\033[35C", end="")
+        print(" " * i, end="")
+        print(" ")
+
+    print("\033[33C", end="\033[5A")
